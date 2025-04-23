@@ -1,0 +1,548 @@
+/* Global */
+body {
+  background-color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://i.pinimg.com/originals/bd/b7/63/bdb763f8b28eb89d39bbfb56613cd31e.gif');
+  background-size: 17% 17%; /* légèrement plus petit */
+  background-position: right 80px bottom 40px; /* décalé plus près du bord droit */
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+
+/* Carte de profil */
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 100px auto 2rem auto;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Avatar */
+.avatar {
+  border-radius: 50%;
+  width: 100px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Liens */
+.links a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Section rappeurs */
+.rappeurs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 2rem;
+}
+
+.rappeur {
+  background-color: #ffffffdd;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.rappeur:hover {
+  transform: scale(1.02);
+}
+
+.rappeur h3 {
+  color: #0077ff;
+  margin-bottom: 0.5rem;
+}
+
+.rappeur a {
+  display: block;
+  color: #333;
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+.rappeur a:hover {
+  color: #0077ff;
+  text-decoration: underline;
+}
+
+/* Miniatures YouTube */
+.miniature {
+  width: 100%;
+  max-width: 220px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.miniature:hover {
+  transform: scale(1.04);
+}
+
+/* Avis / Commentaires */
+.avis-section {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 500px;
+  padding: 1rem;
+}
+
+.avis-section textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: none;
+  margin-top: 10px;
+}
+
+.avis-section button {
+  margin-top: 10px;
+  padding: 0.5rem 1.5rem;
+  background-color: #0077ff;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.avis-section button:hover {
+  background-color: #005fcc;
+}
+
+.avis-posted {
+  margin-top: 10px;
+  font-style: italic;
+  color: #333;
+}
+
+/* Bouton de connexion */
+.login-btn {
+  margin: 2rem auto;
+  display: block;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 20px;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #005fcc;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+/* Bouton de connexion */
+.login-btn {
+  margin: 2rem auto;
+  display: block;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 20px;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #005fcc;
+  transform: scale(1.05); /* petit effet de zoom */
+}
+
+/* Formulaire Modal - Input pseudo */
+#pseudoInput {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#pseudoInput:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 5px rgba(0, 119, 255, 0.5); /* effet de focus */
+}
+/* Carte de profil */
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 100px auto 2rem auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* ombre plus marquée */
+}
+/* Section rappeurs */
+.rappeur {
+  background-color: #ffffffdd;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rappeur:hover {
+  transform: scale(1.05); /* agrandissement plus marqué */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* ombre plus nette */
+}
+
+/* Miniatures YouTube */
+.miniature {
+  width: 100%;
+  max-width: 220px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.miniature:hover {
+  transform: scale(1.04); /* zoom léger */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* ombre plus profonde */
+}
+/* Avis / Commentaires */
+.avis-section {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 500px;
+  padding: 1rem;
+  background-color: #f8f8f8; /* fond léger */
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.avis-section textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: none;
+  margin-top: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avis-section textarea:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 5px rgba(0, 119, 255, 0.5);
+}
+
+.avis-section button {
+  margin-top: 10px;
+  padding: 0.5rem 1.5rem;
+  background-color: #0077ff;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.avis-section button:hover {
+  background-color: #005fcc;
+  transform: scale(1.05); /* léger zoom sur hover */
+}
+/* Modal */
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.modal .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.8rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal .close:hover {
+  color: #0077ff; /* Changement de couleur au survol */
+}
+.search-container input:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 8px rgba(0, 119, 255, 0.5);
+  background-color: #f0f8ff;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rappeur, .beatmaker, .card {
+  animation: fadeIn 0.8s ease-out;
+}
+.miniature {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.miniature:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.avis-section {
+  background: linear-gradient(to right, #f7f7f7, #ffffff);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.login-btn:hover {
+  background-color: #005fcc;
+  transform: scale(1.1); /* effet de zoom */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.links a {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #0077ff; /* Couleur dynamique sur hover */
+  text-decoration: underline;
+}
+body {
+  animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#pseudoInput, .avis-section textarea {
+  transition: all 0.3s ease;
+}
+
+#pseudoInput:focus, .avis-section textarea:focus {
+  box-shadow: 0 0 5px rgba(0, 119, 255, 0.5);
+  border-color: #0077ff;
+}
+.rappeur h3 {
+  color: #000000; /* Changer la couleur en noir */
+  margin-bottom: 0.5rem;
+}
+.links a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: #0077ff; /* Changer la couleur en bleu */
+  font-weight: bold;
+}
+
+.links a:hover {
+  text-decoration: underline;
+  color: #005fcc; /* Couleur bleue plus foncée au survol */
+}
+
+  /* Section des rappeurs */
+  .rappeurs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 2rem;
+  }
+
+  .rappeur {
+    background-color: #ffffffdd;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .rappeur:hover {
+    transform: scale(1.02);
+  }
+
+  .rappeur h3 {
+    color: #000000; /* Titre des rappeurs en noir */
+    margin-bottom: 0.5rem;
+  }
+
+  .rappeur a {
+    display: block;
+    color: #333;
+    margin-top: 8px;
+    text-decoration: none;
+  }
+
+  .rappeur a:hover {
+    color: #0077ff;
+    text-decoration: underline;
+  }
+
+  /* Liens dans la carte de profil */
+  .links a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #0077ff; /* Liens en bleu */
+    font-weight: bold;
+  }
+
+  .links a:hover {
+    text-decoration: underline;
+    color: #005fcc; /* Bleu plus foncé au survol */
+  }
+/* Bouton juste en dessous de la barre de recherche */
+.login-btn {
+  position: absolute;
+  top: 40px;  /* Ajuste selon la hauteur de la barre de recherche */
+  left: 89%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  color: #0077ff;
+  border: 1px solid #0000001f;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.login-btn:hover {
+  background-color: #0077ff;
+  color: white;
+}
+body {
+  background-color: #f0f0f0; /* Fond neutre pour l'ensemble de la page */
+}
+
+.card {
+  position: relative;
+  padding: 2rem;
+  text-align: center;
+  background: rgb(255, 255, 255); /* Fond semi-transparent sur la carte */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 255, 145, 0.621);
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  top: -10px; left: -10px;
+  right: -10px; bottom: -10px;
+  background-image: url('background-image.jpg'); /* Image de fond */
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px); /* Floutage de l'image */
+  z-index: -1;
+}
+/* Pour les cartes des rappeurs */
+.rappeur {
+  position: relative;
+  padding: 1rem;
+  text-align: center;
+  background: rgb(255, 255, 255); /* Fond semi-transparent sur la carte */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgb(0, 255, 145); /* Ajout de contour similaire à la carte */
+  transition: transform 0.3s ease;
+}
+
+.rappeur:hover {
+  transform: scale(1.02);
+}
+body {
+  background-color: #ffffff; /* blanc pur */
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+

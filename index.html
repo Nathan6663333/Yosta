@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1c34Crew</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Ajouts pour la section Beatmaker */
+    .beatmakers-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 2rem;
+    }
+
+    
+    .beatmaker {
+      background-color: #ffffffdd;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .beatmaker:hover {
+      transform: scale(1.02);
+    }
+
+    .beatmaker h3 {
+      color: #0077ff;
+      margin-bottom: 0.5rem;
+    }
+
+    .beatmaker a {
+      display: block;
+      color: #333;
+      margin-top: 8px;
+      text-decoration: none;
+    }
+
+    .beatmaker a:hover {
+      color: #0077ff;
+      text-decoration: underline;
+    }
+
+    .miniature {
+      width: 100%;
+      max-width: 220px;
+      margin: 10px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .miniature:hover {
+      transform: scale(1.04);
+    }
+    
+    /* Ajout de la barre de recherche fixe */
+    .search-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
+      padding: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    .search-container input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .search-container input:focus {
+      border-color: #0077ff;
+    }
+  </style>
+</head>
+<body>
+  
+
+  <!-- Barre de recherche -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Rechercher un artiste ou beatmaker...">
+  </div>
+
+  <!-- Carte de profil -->
+  <div class="card">
+    <img src="https://i.pinimg.com/736x/34/26/a2/3426a28647a55689d19af7d9441b4413.jpg" alt="Photo de profil" class="avatar">
+    <h1>1c34</h1>
+    <p class="bio">(Xaviersobased, 4Jay, Luci4, Xhris2eazy)</p>
+    <div class="links">
+      <a href="#">world 🌐</a>
+      <a href="https://www.instagram.com/ton-username" target="_blank">Instagram 📸</a>
+    </div>
+  </div>
+
+  <!-- Section des rappeurs -->
+  <div class="rappeurs-container">
+    <!-- Rappeur 1 -->
+    <div class="rappeur">
+      <h3>Xaviersobased</h3>
+      <a href="https://www.youtube.com/watch?v=09a1XQTl474" target="_blank">Patchmade - Prod.Kashpaint</a>
+      <a href="https://www.youtube.com/watch?v=09a1XQTl474" target="_blank">
+        <img src="https://img.youtube.com/vi/09a1XQTl474/hqdefault.jpg" alt="Miniature clip" class="miniature">
+      </a>
+    </div>
+
+    <!-- Rappeur 2 -->
+    <div class="rappeur">
+      <h3>Luci4</h3>
+      <a href="https://www.youtube.com/watch?v=-DENhuNNkK4" target="_blank">Kurxxed Emeraldz - Prod Luci4</a>
+      <a href="https://www.youtube.com/watch?v=-DENhuNNkK4" target="_blank">
+        <img src="https://img.youtube.com/vi/-DENhuNNkK4/hqdefault.jpg" alt="Miniature clip" class="miniature">
+      </a>
+    </div>
+
+    <!-- Rappeur 3 -->
+    <div class="rappeur">
+      <h3>4Jay</h3>
+      <a href="https://www.youtube.com/watch?v=nBAgH_bMzhE" target="_blank">VampMania (Full up) Unreleased</a>
+      <a href="https://www.youtube.com/watch?v=nBAgH_bMzhE" target="_blank">
+        <img src="https://img.youtube.com/vi/nBAgH_bMzhE/hqdefault.jpg" alt="Miniature clip" class="miniature">
+      </a>
+    </div>
+
+    <!-- Rappeur 4 -->
+    <div class="rappeur">
+      <h3>Xhris2eazy</h3>
+      <a href="https://www.youtube.com/watch?v=KpzfnGGrK3E" target="_blank">TELEPHONE - Prod & Master: Keenanza</a>
+      <a href="https://www.youtube.com/watch?v=KpzfnGGrK3E" target="_blank">
+        <img src="https://img.youtube.com/vi/KpzfnGGrK3E/hqdefault.jpg" alt="Miniature clip" class="miniature">
+      </a>
+    </div>
+  </div>
+  <h2 style="text-align:center; font-size: 2rem; margin-top: 3rem; color: #000;">Producer/Beatmaker</h2>
+
+  <!-- Section des beatmakers -->
+  <div class="beatmakers-container">
+    <!-- Beatmaker 1 -->
+    <div class="beatmaker">
+      <h3>@crude</h3>
+      <a href="https://www.youtube.com/watch?v=fOEVYyrftzU" target="_blank">Track 1 - Beat by Crude</a>
+      <a href="https://www.youtube.com/watch?v=fOEVYyrftzU" target="_blank">
+        <img src="https://img.youtube.com/vi/fOEVYyrftzU/hqdefault.jpg" alt="Miniature clip" class="miniature">
+      </a>
+    </div>
+
+    <!-- Beatmaker 2 -->
+    <div class="beatmaker">
+      <h3>@vainhardt</h3>
+      <a href="https://www.youtube.com/watch?v=LCX1mDNCRcY" target="_blank">Track 2 - Beat by vainhardt</a>
+      <a href="https://www.youtube.com/watch?v=LCX1mDNCRcY" target="_blank">
+        <img src="https://img.youtube.com/vi/LCX1mDNCRcY/hqdefault.jpg" alt="Miniature clip" class="miniature">
+      </a>
+    </div>
+
+    <!-- Beatmaker 3 -->
+    <div class="beatmaker">
+      <h3>@bbuggin</h3>
+      <a href="https://www.youtube.com/watch?v=kz19DLpxqU8" target="_blank">Track 3 - Beat by bbuggin</a>
+      <a href="https://www.youtube.com/watch?v=kz19DLpxqU8" target="_blank">
+        <img src="https://img.youtube.com/vi/kz19DLpxqU8/hqdefault.jpg" alt="Miniature clip" class="miniature">
+      </a>
+    </div>
+  </div>
+
+  <!-- Section commentaire -->
+  <div class="avis-section">
+    <label for="avis">Ton avis :</label>
+    <textarea id="avisTextarea" placeholder="Laisse un commentaire..." rows="3"></textarea>
+    <button id="sendAvis">Envoyer</button>
+    <div id="avisList"></div>
+  </div>
+
+  <!-- Bouton de connexion -->
+  <button id="openLogin" class="login-btn">Se connecter</button>
+
+  <!-- Formulaire modal -->
+  <div id="loginModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeLogin" class="close">&times;</span>
+      <h2>Connexion</h2>
+      <input type="text" id="pseudoInput" placeholder="Entre ton pseudo">
+      <button id="loginBtn">Valider</button>
+    </div>
+  </div>
+
+  <script>
+    let currentUser = null;
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const loginModal = document.getElementById("loginModal");
+      const openLogin = document.getElementById("openLogin");
+      const closeLogin = document.getElementById("closeLogin");
+      const pseudoInput = document.getElementById("pseudoInput");
+      const loginBtn = document.getElementById("loginBtn");
+      const avisTextarea = document.getElementById("avisTextarea");
+      const avisList = document.getElementById("avisList");
+
+      openLogin.addEventListener("click", () => {
+        loginModal.classList.remove("hidden");
+      });
+
+      closeLogin.addEventListener("click", () => {
+        loginModal.classList.add("hidden");
+      });
+
+      loginBtn.addEventListener("click", () => {
+        currentUser = pseudoInput.value;
+        loginModal.classList.add("hidden");
+        openLogin.style.display = "none";
+        avisTextarea.placeholder = `Écrire un avis en tant que ${currentUser}...`;
+      });
+
+      document.getElementById("sendAvis").addEventListener("click", () => {
+        if (currentUser && avisTextarea.value.trim() !== "") {
+          const newAvis = document.createElement("p");
+          newAvis.textContent = `${currentUser} : ${avisTextarea.value}`;
+          avisList.appendChild(newAvis);
+          avisTextarea.value = "";
+        } else {
+          alert("Merci de remplir ton commentaire avant d'envoyer.");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
